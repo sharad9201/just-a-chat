@@ -1,0 +1,8 @@
+{
+  "name": "just-a-chat",
+  "version": "1.0.0",
+  "description": "simple chat app using socket",
+  "main": "server.js",
+  "author": "sharad9201 <sharad.rae19@gmail.com>",
+  "license": "MIT"
+}
