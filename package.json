@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "simple chat app using socket",
   "main": "server.js",
+  "scripts": {
+    "rundev": "nodemon server.js"
+  },
   "author": "sharad9201 <sharad.rae19@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.5",
+    "socket.io": "^4.0.0"
+  }
 }
