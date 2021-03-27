@@ -58,6 +58,17 @@ mongo.connect('mongodb://127.0.0.1/mongochat',function(err,db){
                 })
             }
         })
+
+        //handle clear
+        socket.on('clear', function(data){
+            //Remove add chat from the collection
+
+            chat.remove({}, function(){ // {} => this is blank so we need to erase everthing haha
+                //Emit cleared
+                socket.emit('cleared')
+
+            })
+        })
     })
 
 
