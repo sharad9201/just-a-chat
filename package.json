@@ -4,6 +4,7 @@
   "description": "simple chat app using socket",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "rundev": "nodemon server.js"
   },
   "author": "sharad9201 <sharad.rae19@gmail.com>",
