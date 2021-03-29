@@ -22,7 +22,7 @@
                         Clear
                     </button>
                 </h1>
-                <div class="status"></div>
+                <div id="status"></div>
                 <div id="chat">
                     <input type="text" id="username" class="form-control" placeholder="Enter Name...">
                     <br>
@@ -37,5 +37,43 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script>
+        (function(){
+            var element = function(id){
+                return document.getElementById(id)
+            }
+
+            //Get Elememts
+            // we already decleared document.getElementById above
+
+            var status = element('status')
+            var messages = element('messages')
+            var textarea = element('textarea')
+            var username = element('username')
+            var clearBtn = element('clear')
+
+            // set Default status
+            //just kepping what we above, just a default from above
+
+            var statusDefault = status.textContent
+
+            var setStatus = function(s){
+                //set Status
+                status.textContent = s
+
+                //clear the message  
+                if(s !== statusDefault){
+
+                    var delay = setTimeout(function(){
+                        setStatus(statusDefault)
+                    },4000) //time in millsecond
+                }
+            }
+
+        })()
+
+    </script>
+
 </body>
 </html>
