@@ -78,6 +78,11 @@
             //check for connection
             if(socket !== undefined){
                 console.log('Connected to socket....')
+                //hook out the output from the server.js
+
+                socket.on('output', function(data){
+                    console.log(data)
+                })
             }
 
         })()

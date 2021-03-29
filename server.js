@@ -2,6 +2,7 @@ const mongo = require('mongodb').MongoClient
 const client = require('socket.io')(4000).sockets
 
 
+
 //connect to mongodb
 
 mongo.connect('mongodb://127.0.0.1/mongochat',function(err,db){
@@ -26,7 +27,7 @@ mongo.connect('mongodb://127.0.0.1/mongochat',function(err,db){
             if(err){
                 throw err
             }
-            //emmit the messages
+            //emmit the messages thro messages to the html
 
             socket.emit('output',res)
         })
